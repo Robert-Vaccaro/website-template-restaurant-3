@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<title>Restaurant Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC">
+<style>
+body, html {height: 100%}
+body,h1,h2,h3,h4,h5,h6 {font-family: "Amatic SC", sans-serif}
+.menu {display: none}
+.bgimg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("images/pizza.jpg");
+  min-height: 90%;
+}
+</style>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="bobby-top bobby-hide-small">
+  <div class="bobby-bar bobby-xlarge bobby-black bobby-opacity bobby-hover-opacity-off" id="myNavbar">
+    <a href="#" class="bobby-bar-item bobby-button">HOME</a>
+    <a href="#menu" class="bobby-bar-item bobby-button">MENU</a>
+    <a href="#about" class="bobby-bar-item bobby-button">ABOUT</a>
+    <a href="#myMap" class="bobby-bar-item bobby-button">CONTACT</a>
+  </div>
+</div>
+  
+<!-- Header with image -->
+<header class="bgimg bobby-display-container bobby-grayscale-min" id="home">
+  <div class="bobby-display-bottomleft bobby-padding">
+    <span class="bobby-tag bobby-xlarge">Open from 10am to 12pm</span>
+  </div>
+  <div class="bobby-display-middle bobby-center">
+    <span class="bobby-text-white bobby-hide-small" style="font-size:100px">thin<br>CRUST PIZZA</span>
+    <span class="bobby-text-white bobby-hide-large bobby-hide-medium" style="font-size:60px"><b>thin<br>CRUST PIZZA</b></span>
+    <p><a href="#menu" class="bobby-button bobby-xxlarge bobby-black">Let me see the menu</a></p>
+  </div>
+</header>
+
+<!-- Menu Container -->
+<div class="bobby-container bobby-black bobby-padding-64 bobby-xxlarge" id="menu">
+  <div class="bobby-content">
+  
+    <h1 class="bobby-center bobby-jumbo" style="margin-bottom:64px">THE MENU</h1>
+    <div class="bobby-row bobby-center bobby-border bobby-border-dark-grey">
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Pizza');" id="myLink">
+        <div class="bobby-col s4 tablink bobby-padding-large bobby-hover-red">Pizza</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Pasta');">
+        <div class="bobby-col s4 tablink bobby-padding-large bobby-hover-red">Salads</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Starter');">
+        <div class="bobby-col s4 tablink bobby-padding-large bobby-hover-red">Starter</div>
+      </a>
+    </div>
+
+    <div id="Pizza" class="bobby-container menu bobby-padding-32 bobby-white">
+      <h1><b>Margherita</b> <span class="bobby-right bobby-tag bobby-dark-grey bobby-round">$12.50</span></h1>
+      <p class="bobby-text-grey">Fresh tomatoes, fresh mozzarella, fresh basil</p>
+      <hr>
+   
+      <h1><b>Formaggio</b> <span class="bobby-right bobby-tag bobby-dark-grey bobby-round">$15.50</span></h1>
+      <p class="bobby-text-grey">Four cheeses (mozzarella, parmesan, pecorino, jarlsberg)</p>
+      <hr>
+      
+      <h1><b>Chicken</b> <span class="bobby-right bobby-tag bobby-dark-grey bobby-round">$17.00</span></h1>
+      <p class="bobby-text-grey">Fresh tomatoes, mozzarella, chicken, onions</p>
+      <hr>
+
+      <h1><b>Pineapple'o'clock</b> <span class="bobby-right bobby-tag bobby-dark-grey bobby-round">$16.50</span></h1>
+      <p class="bobby-text-grey">Fresh tomatoes, mozzarella, fresh pineapple, bacon, fresh basil</p>
+      <hr>
+
+      <h1><b>Meat Town</b> <span class="bobby-tag bobby-red bobby-round">Hot!</span><span class="bobby-right bobby-tag bobby-dark-grey bobby-round">$20.00</span></h1>
+      <p class="bobby-text-grey">Fresh tomatoes, mozzarella, hot pepporoni, hot sausage, beef, chicken</p>
+      <hr>
+
+      <h1><b>Parma</b> <span class="bobby-tag bobby-grey bobby-round">New</span><span class="bobby-right bobby-tag bobby-dark-grey bobby-round">$21.50</span></h1>
+      <p class="bobby-text-grey">Fresh tomatoes, mozzarella, parma, bacon, fresh arugula</p>
+    </div>
+
+    <div id="Pasta" class="bobby-container menu bobby-padding-32 bobby-white">
+      <h1><b>Lasagna</b> <span class="bobby-tag bobby-grey bobby-round">Popular</span> <span class="bobby-right bobby-tag bobby-dark-grey bobby-round">$13.50</span></h1>
+      <p class="bobby-text-grey">Special sauce, mozzarella, parmesan, ground beef</p>
+      <hr>
+   
+      <h1><b>Ravioli</b> <span class="bobby-right bobby-tag bobby-dark-grey bobby-round">$14.50</span></h1>
+      <p class="bobby-text-grey">Ravioli filled with cheese</p>
+      <hr>
+      
+      <h1><b>Spaghetti Classica</b> <span class="bobby-right bobby-tag bobby-dark-grey bobby-round">$11.00</span></h1>
+      <p class="bobby-text-grey">Fresh tomatoes, onions, ground beef</p>
+      <hr>
+
+      <h1><b>Seafood pasta</b> <span class="bobby-right bobby-tag bobby-dark-grey bobby-round">$25.50</span></h1>
+      <p class="bobby-text-grey">Salmon, shrimp, lobster, garlic</p>
+    </div>
+
+
+    <div id="Starter" class="bobby-container menu bobby-padding-32 bobby-white">
+      <h1><b>Today's Soup</b> <span class="bobby-tag bobby-grey bobby-round">Seasonal</span><span class="bobby-right bobby-tag bobby-dark-grey bobby-round">$5.50</span></h1>
+      <p class="bobby-text-grey">Ask the waiter</p>
+      <hr>
+   
+      <h1><b>Bruschetta</b> <span class="bobby-right bobby-tag bobby-dark-grey bobby-round">$8.50</span></h1>
+      <p class="bobby-text-grey">Bread with pesto, tomatoes, onion, garlic</p>
+      <hr>
+      
+      <h1><b>Garlic bread</b> <span class="bobby-right bobby-tag bobby-dark-grey bobby-round">$9.50</span></h1>
+      <p class="bobby-text-grey">Grilled ciabatta, garlic butter, onions</p>
+      <hr>
+      
+      <h1><b>Tomozzarella</b> <span class="bobby-right bobby-tag bobby-dark-grey bobby-round">$10.50</span></h1>
+      <p class="bobby-text-grey">Tomatoes and mozzarella</p>
+    </div><br>
+
+  </div>
+</div>
+
+<!-- About Container -->
+<div class="bobby-container bobby-padding-64 bobby-red bobby-grayscale bobby-xlarge" id="about">
+  <div class="bobby-content">
+    <h1 class="bobby-center bobby-jumbo" style="margin-bottom:64px">About</h1>
+    <p>The Pizza Restaurant was founded in blabla by Mr. Italiano in lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <p><strong>The Chef?</strong> Mr. Italiano himself<img src="images/man3.jpg" style="width:150px" class="bobby-circle bobby-right" alt="Chef"></p>
+    <p>We are proud of our interiors.</p>
+    <img src="images/bakery.jpeg" style="width:100%" class="bobby-margin-top bobby-margin-bottom" alt="Restaurant">
+    <h1><b>Opening Hours</b></h1>
+    
+    <div class="bobby-row">
+      <div class="bobby-col s6">
+        <p>Mon & Tue CLOSED</p>
+        <p>Wednesday 10.00 - 24.00</p>
+        <p>Thursday 10:00 - 24:00</p>
+      </div>
+      <div class="bobby-col s6">
+        <p>Friday 10:00 - 12:00</p>
+        <p>Saturday 10:00 - 23:00</p>
+        <p>Sunday Closed</p>
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+<!-- Image of location/map -->
+<img src="images/bg16.jpg" class="bobby-image bobby-greyscale" style="width:100%;" id="myMap">
+
+<!-- Contact -->
+<div class="bobby-container bobby-padding-64 bobby-blue-grey bobby-grayscale-min bobby-xlarge">
+  <div class="bobby-content">
+    <h1 class="bobby-center bobby-jumbo" style="margin-bottom:64px">Contact</h1>
+    <p>Find us at some address at some place or call us at 05050515-122330</p>
+    <p><span class="bobby-tag">FYI!</span> We offer full-service catering for any event, large or small. We understand your needs and we will cater the food to satisfy the biggerst criteria of them all, both look and taste.</p>
+    <p class="bobby-xxlarge"><strong>Reserve</strong> a table, ask for today's special or just send us a message:</p>
+    <form action="/action_page.php" target="_blank">
+      <p><input class="bobby-input bobby-padding-16 bobby-border" type="text" placeholder="Name" required name="Name"></p>
+      <p><input class="bobby-input bobby-padding-16 bobby-border" type="number" placeholder="How many people" required name="People"></p>
+      <p><input class="bobby-input bobby-padding-16 bobby-border" type="datetime-local" placeholder="Date and time" required name="date" value="2017-11-16T20:00"></p>
+      <p><input class="bobby-input bobby-padding-16 bobby-border" type="text" placeholder="Message \ Special requirements" required name="Message"></p>
+      <p><button class="bobby-button bobby-light-grey bobby-block" type="submit">SEND MESSAGE</button></p>
+    </form>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="bobby-center bobby-black bobby-padding-48 bobby-xxlarge">
+</footer>
+
+<script>
+// Tabbed Menu
+function openMenu(evt, menuName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("menu");
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+     tablinks[i].className = tablinks[i].className.replace(" bobby-red", "");
+  }
+  document.getElementById(menuName).style.display = "block";
+  evt.currentTarget.firstElementChild.className += " bobby-red";
+}
+document.getElementById("myLink").click();
+</script>
+
+</body>
+</html>
